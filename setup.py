@@ -14,7 +14,7 @@ def get_dependencies():
     if env and env == "code":
         return dependency
 
-    return dependency + []
+    return dependency + ["mw-common"]
 
 
 setup(
@@ -32,6 +32,8 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=get_dependencies(),
+    py_modules=["mweb_cli_bsw"],
+    entry_points={'console_scripts': ['mwebcli=mweb_cli.cli.mweb_cli_bsw:bsw']},
     classifiers=[
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',

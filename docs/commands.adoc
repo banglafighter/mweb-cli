@@ -1,0 +1,28 @@
+
+
+== Create Virtual Environment
+```bash
+# If package not install then run it
+pip install virtualenv
+
+# Create virtual env at .venv directory
+python -m venv .venv
+
+# Active VE on Windows
+.venv\Scripts\activate
+
+# Active VE on Unix based OS
+source .venv/bin/activate
+
+# Deactivate the VE
+deactivate
+```
+
+== Install Package on development mode
+```bash
+# Editable Mode, Change will appy automatically
+pip install -e .
+
+# For Production Mode, Change will not apply automatically
+pip install .
+```
