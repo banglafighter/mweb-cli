@@ -9,12 +9,14 @@ env = os.environ.get('source')
 
 
 def get_dependencies():
-    dependency = []
+    dependency = [
+        "GitPython==3.1.50"
+    ]
 
     if env and env == "code":
         return dependency
 
-    return dependency + ["mw-common"]
+    return dependency + ["mw-common", "mw-file-content"]
 
 
 setup(
