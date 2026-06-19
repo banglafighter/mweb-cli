@@ -1,11 +1,10 @@
-from common.git_util import GitUtil
+from ..common.git_util import GitUtil
 from mw_common import MwException, Console
-from mw_file_content.file_content.mwfc_data_file_util import DataFileUtil
 from .mwebsm_descriptor import MwebSmDescriptor, MWebSMConst, Module, Clone
 from ..common.python_util import PythonUtil
 from ..common.mweb_cli_const import MWebCLIConst
 from ..common.shell_util import ShellUtil
-from mw_file_content import FileUtil
+from mw_file_content import FileUtil, DataFileUtil
 
 
 class SourceManager:
@@ -154,3 +153,4 @@ class SourceManager:
             command_root=project_root,
             project_root=project_root
         )
+        Console.success("Process has been completed!", system_log=True)
