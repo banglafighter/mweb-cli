@@ -5,8 +5,11 @@
 # If package not install then run it
 pip install virtualenv
 
+pip3.14 install virtualenv
+
 # Create virtual env at .venv directory
 python -m venv .venv
+python3.14  -m venv .venv
 
 # Active VE on Windows
 .venv\Scripts\activate
